@@ -14,8 +14,8 @@ export default function Home({ coins }) {
         {coins.map((value) => (
           <CoinList {...value} key={value.id} />
         ))}
-        <Pagination />
       </div>
+      <Pagination />
     </>
   );
 }

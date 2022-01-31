@@ -1,5 +1,6 @@
 import Head from "next/head";
 import CoinList from "../components/CoinList";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Pagination from "../components/Pagination";
 
@@ -16,6 +17,7 @@ export default function Home({ coins }) {
         ))}
       </div>
       <Pagination />
+      <Footer />
     </>
   );
 }

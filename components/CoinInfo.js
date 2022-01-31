@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import CalcValue from "./CalcValue";
 
 const CoinInfo = ({ coin }) => {
   const roundedPrice1d = (
@@ -38,7 +37,9 @@ const CoinInfo = ({ coin }) => {
         <div className="flex justify-between border-b-2 mb-3">
           <h3 className="text-lg text-gray-500">Fully Diluted Valuation:</h3>
           <h3 className="text-lg pb-1 font-medium">
-            ${coin.market_data.fully_diluted_valuation.usd}
+            {coin.market_data.fully_diluted_valuation.usd == null
+              ? "Infinte"
+              : "$" + coin.market_data.fully_diluted_valuation.usd}
           </h3>
         </div>
         <div className="flex justify-between border-b-2 mb-3">
@@ -50,11 +51,12 @@ const CoinInfo = ({ coin }) => {
         <div className="flex justify-between border-b-2 mb-3">
           <h3 className="text-lg text-gray-500">Max Supply:</h3>
           <h3 className="text-lg pb-1 font-medium">
-            {coin.market_data.max_supply}
+            {coin.market_data.max_supply == null
+              ? "Infinite"
+              : coin.market_data.max_supply}
           </h3>
         </div>
       </div>
-      <CalcValue coin={coin} />
       <div className="w-full flex justify-center mt-10">
         <Link href={coin.links.homepage[0]}>
           <a>

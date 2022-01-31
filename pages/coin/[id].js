@@ -10,7 +10,6 @@ const coin = ({ coin }) => {
       <div className="container mx-auto px-5 ">
         <CoinInfo coin={coin} />
       </div>
-      <Footer />
     </>
   );
 };

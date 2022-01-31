@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Footer from "./Footer";
 
 const CoinList = ({
   name,
@@ -31,7 +32,7 @@ const CoinList = ({
               <h1 className="pl-4 text-lg font-medium">{name}</h1>
             </div>
             <div className="w-1/2 flex justify-end text-md font-semibold md:w-1/2">
-              <h3 className="pr-5 ">€{current_price}</h3>
+              <h3 className="pr-5 ">${current_price}</h3>
               <h3
                 className={
                   roundedPrice1 > 0
@@ -63,7 +64,7 @@ const CoinList = ({
             <div className="md:w-1/4 md:flex justify-end hidden">
               <Link href={`coin/${id}`}>
                 <a>
-                  <button className=" bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-md">
+                  <button className=" bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-700  text-white px-3 py-1 rounded-md">
                     Learn More!
                   </button>
                 </a>

@@ -17,7 +17,7 @@ const CoinInfo = ({ coin }) => {
       </div>
       <div className="flex mt-6 items-baseline">
         <h1 className="text-5xl font-bold ">
-          {coin.market_data.current_price.eur}€
+          ${coin.market_data.current_price.usd}
         </h1>
         <p
           className={
@@ -58,7 +58,7 @@ const CoinInfo = ({ coin }) => {
       <div className="w-full flex justify-center mt-10">
         <Link href={coin.links.homepage[0]}>
           <a>
-            <button className="bg-teal-400 text-white text-2xl font-medium py-2 rounded-lg px-6">
+            <button className="bg-teal-400 text-white text-2xl font-medium py-2 rounded-lg px-6 hover:bg-teal-500 duration-200">
               Learn more
             </button>
           </a>

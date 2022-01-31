@@ -1,5 +1,6 @@
 import React from "react";
 import CoinInfo from "../../components/CoinInfo";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 const coin = ({ coin }) => {
@@ -9,7 +10,7 @@ const coin = ({ coin }) => {
       <div className="container mx-auto px-5 ">
         <CoinInfo coin={coin} />
       </div>
-      {console.log(coin)}
+      <Footer />
     </>
   );
 };
